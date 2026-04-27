@@ -5,32 +5,32 @@ import type {
 } from '@credo-ts/core/build/modules/generic-records/repository/GenericRecord'
 
 // Anoncreds
-import {
-  AnonCredsCredentialFormatService,
-  AnonCredsCredentialInfo,
-  AnonCredsCredentialOffer,
-  AnonCredsCredentialsForProofRequest,
-  AnonCredsModule,
-  AnonCredsNonRevokedInterval,
-  AnonCredsPredicateType,
-  AnonCredsProof,
-  AnonCredsProofFormat,
-  AnonCredsProofFormatService,
-  AnonCredsProofRequest,
-  AnonCredsProofRequestRestriction,
-  AnonCredsRequestedAttribute,
-  AnonCredsRequestedAttributeMatch,
-  AnonCredsRequestedPredicate,
-  AnonCredsRequestedPredicateMatch,
-  LegacyIndyCredentialFormatService,
-  LegacyIndyProofFormat,
-  LegacyIndyProofFormatService,
-  LegacyIndyProofRequest,
-  V1CredentialProtocol,
-  V1ProofProtocol,
-  V1RequestPresentationMessage,
-} from '@credo-ts/anoncreds'
-import { AnonCredsCredentialMetadataKey } from '@credo-ts/anoncreds/build/utils/metadata'
+// import {
+//   AnonCredsCredentialFormatService,
+//   AnonCredsCredentialInfo,
+//   AnonCredsCredentialOffer,
+//   AnonCredsCredentialsForProofRequest,
+//   AnonCredsModule,
+//   AnonCredsNonRevokedInterval,
+//   AnonCredsPredicateType,
+//   AnonCredsProof,
+//   AnonCredsProofFormat,
+//   AnonCredsProofFormatService,
+//   AnonCredsProofRequest,
+//   AnonCredsProofRequestRestriction,
+//   AnonCredsRequestedAttribute,
+//   AnonCredsRequestedAttributeMatch,
+//   AnonCredsRequestedPredicate,
+//   AnonCredsRequestedPredicateMatch,
+//   LegacyIndyCredentialFormatService,
+//   LegacyIndyProofFormat,
+//   LegacyIndyProofFormatService,
+//   LegacyIndyProofRequest,
+//   V1CredentialProtocol,
+//   V1ProofProtocol,
+//   V1RequestPresentationMessage,
+// } from '@credo-ts/anoncreds'
+// import { AnonCredsCredentialMetadataKey } from '@credo-ts/anoncreds/build/utils/metadata'
 // Core
 import { AskarModule } from '@credo-ts/askar'
 import {
@@ -102,13 +102,13 @@ import {
   ProofFormatDataMessagePayload,
 } from '@credo-ts/core/build/modules/proofs/protocol/ProofProtocolOptions'
 // Indy VDR
-import {
-  IndyVdrAnonCredsRegistry,
-  IndyVdrIndyDidResolver,
-  IndyVdrModule,
-  IndyVdrPoolConfig,
-  IndyVdrSovDidResolver,
-} from '@credo-ts/indy-vdr'
+// import {
+//   IndyVdrAnonCredsRegistry,
+//   IndyVdrIndyDidResolver,
+//   IndyVdrModule,
+//   IndyVdrPoolConfig,
+//   IndyVdrSovDidResolver,
+// } from '@credo-ts/indy-vdr'
 import { OpenId4VcHolderModule } from '@credo-ts/openid4vc'
 import { PushNotificationsFcmModule } from '@credo-ts/push-notifications'
 // Q&A
@@ -202,34 +202,34 @@ export {
   SdJwtVcRecord,
 }
 // Anoncreds
-export {
-  V1RequestPresentationMessage,
-  AnonCredsCredentialOffer,
-  AnonCredsCredentialsForProofRequest,
-  AnonCredsRequestedAttributeMatch,
-  AnonCredsRequestedPredicateMatch,
-  AnonCredsNonRevokedInterval,
-  AnonCredsProofRequestRestriction,
-  AnonCredsProofFormat,
-  AnonCredsProofFormatService,
-  LegacyIndyProofFormat,
-  LegacyIndyProofFormatService,
-  AnonCredsPredicateType,
-  AnonCredsProof,
-  AnonCredsRequestedAttribute,
-  AnonCredsRequestedPredicate,
-  LegacyIndyProofRequest,
-  AnonCredsProofRequest,
-  AnonCredsCredentialMetadataKey,
-  AnonCredsModule,
-  V1CredentialProtocol,
-  LegacyIndyCredentialFormatService,
-  AnonCredsCredentialFormatService,
-  V1ProofProtocol,
-  AnonCredsCredentialInfo,
-}
+// export {
+//   V1RequestPresentationMessage,
+//   AnonCredsCredentialOffer,
+//   AnonCredsCredentialsForProofRequest,
+//   AnonCredsRequestedAttributeMatch,
+//   AnonCredsRequestedPredicateMatch,
+//   AnonCredsNonRevokedInterval,
+//   AnonCredsProofRequestRestriction,
+//   AnonCredsProofFormat,
+//   AnonCredsProofFormatService,
+//   LegacyIndyProofFormat,
+//   LegacyIndyProofFormatService,
+//   AnonCredsPredicateType,
+//   AnonCredsProof,
+//   AnonCredsRequestedAttribute,
+//   AnonCredsRequestedPredicate,
+//   LegacyIndyProofRequest,
+//   AnonCredsProofRequest,
+//   AnonCredsCredentialMetadataKey,
+//   AnonCredsModule,
+//   V1CredentialProtocol,
+//   LegacyIndyCredentialFormatService,
+//   AnonCredsCredentialFormatService,
+//   V1ProofProtocol,
+//   AnonCredsCredentialInfo,
+// }
 // Indy Vdr
-export { IndyVdrAnonCredsRegistry, IndyVdrPoolConfig, IndyVdrIndyDidResolver, IndyVdrModule, IndyVdrSovDidResolver }
+// export { IndyVdrAnonCredsRegistry, IndyVdrPoolConfig, IndyVdrIndyDidResolver, IndyVdrModule, IndyVdrSovDidResolver }
 // Askar
 export { AskarModule }
 // Push Notifications
