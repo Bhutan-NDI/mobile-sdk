@@ -1,17 +1,16 @@
 import type { InitConfig, MediatorPickupStrategy } from '@credo-ts/core'
 import type { AgentModulesInput } from '@credo-ts/core/build/agent/AgentModules'
-import type { IndyVdrPoolConfig } from '@credo-ts/indy-vdr'
-
-import {
-  AnonCredsCredentialFormatService,
-  AnonCredsModule,
-  AnonCredsProofFormatService,
-  DataIntegrityCredentialFormatService,
-  LegacyIndyCredentialFormatService,
-  LegacyIndyProofFormatService,
-  V1CredentialProtocol,
-  V1ProofProtocol,
-} from '@credo-ts/anoncreds'
+// import type { IndyVdrPoolConfig } from '@credo-ts/indy-vdr'
+// import {
+//   AnonCredsCredentialFormatService,
+//   AnonCredsModule,
+//   AnonCredsProofFormatService,
+//   DataIntegrityCredentialFormatService,
+//   LegacyIndyCredentialFormatService,
+//   LegacyIndyProofFormatService,
+//   V1CredentialProtocol,
+//   V1ProofProtocol,
+// } from '@credo-ts/anoncreds'
 import { AskarModule } from '@credo-ts/askar'
 import {
   Agent,
@@ -30,17 +29,17 @@ import {
   WebDidResolver,
   WsOutboundTransport,
 } from '@credo-ts/core'
-import {
-  IndyVdrAnonCredsRegistry,
-  IndyVdrIndyDidResolver,
-  IndyVdrModule,
-  IndyVdrSovDidResolver,
-} from '@credo-ts/indy-vdr'
+// import {
+//   IndyVdrAnonCredsRegistry,
+//   IndyVdrIndyDidResolver,
+//   IndyVdrModule,
+//   IndyVdrSovDidResolver,
+// } from '@credo-ts/indy-vdr'
 import { PushNotificationsFcmModule } from '@credo-ts/push-notifications'
 import { QuestionAnswerModule } from '@credo-ts/question-answer'
 import { agentDependencies } from '@credo-ts/react-native'
-import { anoncreds } from '@hyperledger/anoncreds-react-native'
-import { indyVdr } from '@hyperledger/indy-vdr-react-native'
+// import { anoncreds } from '@hyperledger/anoncreds-react-native'
+// import { indyVdr } from '@hyperledger/indy-vdr-react-native'
 // Register the React Native Askar bindings
 import '@openwallet-foundation/askar-react-native'
 // Import the shared Askar interface for Credo
@@ -49,24 +48,23 @@ import { askar as ariesAskar } from '@openwallet-foundation/askar-react-native'
 export type AdeyaAgentModuleOptions = {
   mediatorInvitationUrl: string
   mediatorPickupStrategy: MediatorPickupStrategy
-  indyNetworks: [IndyVdrPoolConfig, ...IndyVdrPoolConfig[]]
+  // indyNetworks: [IndyVdrPoolConfig, ...IndyVdrPoolConfig[]]
   maximumMessagePickup?: number
 }
 
 export const getAgentModules = ({
   mediatorInvitationUrl,
   mediatorPickupStrategy,
-  indyNetworks,
   maximumMessagePickup = 5,
 }: AdeyaAgentModuleOptions) => {
   return {
     askar: new AskarModule({
       ariesAskar,
     }),
-    anoncreds: new AnonCredsModule({
-      registries: [new IndyVdrAnonCredsRegistry()],
-      anoncreds,
-    }),
+    // anoncreds: new AnonCredsModule({
+    //   registries: [new IndyVdrAnonCredsRegistry()],
+    //   anoncreds,
+    // }),
     mediationRecipient: new MediationRecipientModule({
       mediatorInvitationUrl,
       mediatorPickupStrategy,
@@ -74,23 +72,23 @@ export const getAgentModules = ({
     }),
     dids: new DidsModule({
       registrars: [],
-      resolvers: [new WebDidResolver(), new IndyVdrSovDidResolver(), new IndyVdrIndyDidResolver()],
+      resolvers: [new WebDidResolver()],
     }),
-    indyVdr: new IndyVdrModule({
-      indyVdr,
-      networks: indyNetworks,
-    }),
+    // indyVdr: new IndyVdrModule({
+    //   indyVdr,
+    //   networks: indyNetworks,
+    // }),
     credentials: new CredentialsModule({
       autoAcceptCredentials: AutoAcceptCredential.ContentApproved,
       credentialProtocols: [
-        new V1CredentialProtocol({
-          indyCredentialFormat: new LegacyIndyCredentialFormatService(),
-        }),
+        // new V1CredentialProtocol({
+        //   indyCredentialFormat: new LegacyIndyCredentialFormatService(),
+        // }),
         new V2CredentialProtocol({
           credentialFormats: [
-            new LegacyIndyCredentialFormatService(),
-            new AnonCredsCredentialFormatService(),
-            new DataIntegrityCredentialFormatService(),
+            // new LegacyIndyCredentialFormatService(),
+            // new AnonCredsCredentialFormatService(),
+            // new DataIntegrityCredentialFormatService(),
             new JsonLdCredentialFormatService(),
           ],
         }),
@@ -99,13 +97,13 @@ export const getAgentModules = ({
     proofs: new ProofsModule({
       autoAcceptProofs: AutoAcceptProof.ContentApproved,
       proofProtocols: [
-        new V1ProofProtocol({
-          indyProofFormat: new LegacyIndyProofFormatService(),
-        }),
+        // new V1ProofProtocol({
+        //   indyProofFormat: new LegacyIndyProofFormatService(),
+        // }),
         new V2ProofProtocol({
           proofFormats: [
-            new LegacyIndyProofFormatService(),
-            new AnonCredsProofFormatService(),
+            // new LegacyIndyProofFormatService(),
+            // new AnonCredsProofFormatService(),
             new DifPresentationExchangeProofFormatService(),
           ],
         }),
